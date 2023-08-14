@@ -171,27 +171,6 @@ class HBNBCommand(cmd.Cmd):
         elif len(args) == 1:
             print("** instance id missing **")
         else:
-
-            attribute_value = " ".join(args[3:])
-            setattr(obj, attribute_name, attribute_value)
-            storage.save()
-
-        if len(args) > 5:
-            try:
-                dict_str = ' '.join(args[5:])
-                data_dict = eval(dict_str)
-                for key, value in data_dict.items():
-                    setattr(obj, key, value)
-                storage.save()
-            except Exception as e:
-                print("** invalid dictionary representation **")
-
-    def default(self, line):
-        """
-        This method is called on an input line
-        """
-        self.mode_commands(line)
-
             obj_dict = storage.all()
             char = "{}.{}".format(args[0], args[1])
             if char not in obj_dict:
@@ -205,7 +184,7 @@ class HBNBCommand(cmd.Cmd):
                 if args[2] not in m:
                     for key, value in obj_dict.items():
                         setattr(value, args[2], eval(args[3]))
-                        val
+                        value.save()
 
     def help_update(self):
         """
@@ -236,8 +215,8 @@ class HBNBCommand(cmd.Cmd):
 
     def default(self, mode):
         """
-        cmd method to validate and parse when it does not
-        recognize command syntax
+        cmd method to validate when it does not
+        recognize the prefix of the command.
         """
         args = mode.split(".")
         parse = args[1].split("(")
