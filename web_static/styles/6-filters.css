@@ -63,6 +63,7 @@
     padding-right: 9px;
     line-height: 30px;
     padding-bottom: 50px;
+    list-style: none;
 }
 
 .amenities .popover {
