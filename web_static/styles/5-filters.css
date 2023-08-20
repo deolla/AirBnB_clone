@@ -4,43 +4,47 @@
 	width: 100%;
 	border: 1px solid #DDDDDD;
 	border-radius: 4px;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
 }
 
-.locations, .amenities {
+.filters button {
+	width: 20%;
+	height: 48px;
+	color: #FFFFFF;
+	border: none;
+	border-radius: 4px;
+	font-size: 18px;
+	background-color: #FF5A5F;
+	margin-right: 30px;
+}
+
+.filters button:hover {
+	opacity: 90%;
+}
+
+.locations, .amenities{
+	text-align: left;
 	height: 100%;
 	width: 25%;
-	display: inline-block;
-	margin-left: 40px;
+	margin-left: 30px;
+	float: left;
 }
 
 .locations {
-	border-right: 1px solid #DDDDDD;
+	border-right: solid 1px #DDDDDD;
 }
 
-.locations h3, .amenities h3 {
+h3 {
 	font-weight: 600;
-	margin-top: 10px;
+	margin: 0px;
+	margin-top: 17px;
+	padding: 0px;
 }
-
-.locations h4, .amenities h4 {
+h4 {
+	margin: 0;
+	padding: 0px;
 	font-weight: 400;
 	font-size: 14px;
-	margin-top: -12px;
-}
-
-button {
-	font-size: 18px;
-	background-color: #ff5a5f;
-	color: #FFFFFF;
-	height: 48px;
-	border: 0;
-	width: 20%;
-	border-radius: 4px;
-	margin: 10px auto;
-	float: right;
-	margin-right: 20px;
-}
-
-button:hover {
-	opacity: 0.9;
 }
