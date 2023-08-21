@@ -7,10 +7,10 @@ header {
 	align-items: center;
 }
 
-header .logo {
-	background: url("../images/logo.png");
+.icon {
+	width: 100px;
 	height: 60px;
-	width: 142px;
-	background-repeat: no-repeat center;
-	background-position: 20px;
+	background: url(../images/logo.png);
+	background-repeat: no-repeat;
+	background-position-x: 20px;
 }
