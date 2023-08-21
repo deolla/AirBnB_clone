@@ -1,32 +1,16 @@
-@media only screen and (max-width: 600px) {
-}
-
-
-@media only screen and (min-width: 600px) {
-
-}
-
-@media only screen and (min-width: 768px) {
-
-}
-
-@media only screen and (min-width: 992px) {
-
-}
 .places {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	z-index: -1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: -1;
 }
 
 .places article {
 	display: flex;
 	flex-wrap: wrap;
-	width: 100%;
-	max-width: 400px;
-	padding: 1rem;
-	margin: 1rem;
+	width: 390px;
+	padding: 20px;
+	margin: 20px;
 	border-radius: 4px;
 	border: 1px solid #FF5A5F;
 	box-sizing: border-box;
@@ -75,7 +59,6 @@
 	flex-wrap: wrap;
 	justify-content: space-evenly;
 }
-
 .user {
 	padding: 20px 0 5px;
 }
@@ -99,7 +82,7 @@
 .max_guest,
 .number_rooms,
 .number_bathrooms {
-	width: 33%;
+	width: 100px;
 	background-repeat: no-repeat;
 	display:flex;
 	flex-direction: column-reverse;
@@ -151,6 +134,7 @@
 .tv_icon {
 	background-image: url(../images/icon_tv.png);
 }
+
 .wifi {
 	background-image: url(../images/icon_wifi.png);
 }
@@ -158,8 +142,8 @@
 .friendly_pet,
 .tv_icon,
 .wifi {
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 20px;
-  height: 20px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 20px;
+	height: 20px;
 }

@@ -4,14 +4,13 @@ header {
 	width: 100%;
 	border-bottom: 1px solid #CCCCCC;
 	display: flex;
-	justify-content: left;
 	align-items: center;
 }
 
-.logo {
-	background: url(../images/logo.png);
+header .logo {
+	background: url("../images/logo.png");
 	height: 60px;
 	width: 142px;
-	background-repeat: no-repeat;
+	background-repeat: no-repeat center;
 	background-position: 20px;
 }
