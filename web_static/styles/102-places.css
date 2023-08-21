@@ -1,3 +1,18 @@
+@media only screen and (max-width: 600px) {
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
 .places {
   display: flex;
   flex-wrap: wrap;
@@ -8,9 +23,10 @@
 .places article {
   display: flex;
   flex-wrap: wrap;
-  width: 390px;
-  padding: 20px;
-  margin: 20px;
+  width: 100%;
+  max-width: 400px;
+  padding: 1rem;
+  margin: 1rem;
   border-radius: 4px;
   border: 1px solid #FF5A5F;
   box-sizing: border-box;
@@ -30,8 +46,12 @@
   text-align: center;
   flex-grow: 1;
 }
+/* ************************************************** */
+/* article information */
+/* ************************************************** */
 
-.home {
+/* circle with price */
+.article_places_header {
   width: 100%;
   display: flex;
 }
@@ -50,6 +70,10 @@
     margin-bottom: 5px;
 }
 
+/* ******************************************/
+/* information box with icons */
+/* ******************************************/
+
 .information {
   width: 100%;
   height: 80px;
@@ -67,6 +91,9 @@
   padding: 0;
 }
 
+/***********/
+/* icons   */
+
 .max_guest {
   background-image: url(../images/icon_group.png);
 }
@@ -82,7 +109,7 @@
 .max_guest,
 .number_rooms,
 .number_bathrooms {
-  width: 100px;
+  width: 33%;
   background-repeat: no-repeat;
   display:flex;
   flex-direction: column-reverse;
@@ -90,6 +117,9 @@
   text-align:center;
 }
 
+/*******************************************/
+/* more information */
+/*******************************************/
 .places .amenities,
 .places .reviews {
   margin-top: 40px;
@@ -117,7 +147,9 @@
 .places .reviews p {
   font-size: 12px;
 }
-
+/*******************************************/
+/* amenities icons */
+/*******************************************/
 .places .amenities ul li{
   display: flex;
   flex-direction: row;
@@ -127,19 +159,19 @@
   align-items: end;
   }
 
-.friendly_pet {
+.places_amenities_pet_friendly {
   background-image: url(../images/icon_pets.png);
 }
-.tv_icon {
+.places_amenities_tv {
   background-image: url(../images/icon_tv.png);
 }
-.wifi {
+.places_amenities_wifi {
   background-image: url(../images/icon_wifi.png);
 }
 
-.friendly_pet,
-.tv_icon,
-.wifi {
+.places_amenities_pet_friendly,
+.places_amenities_tv,
+.places_amenities_wifi {
   background-size: cover;
   background-repeat: no-repeat;
   width: 20px;
