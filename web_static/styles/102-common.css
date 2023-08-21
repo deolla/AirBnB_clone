@@ -18,15 +18,12 @@ body {
 	color: #484848;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
 	z-index: 0;
+	justify-content: space-between;
 }
 
 span {
-.locations:hover,
-  .amenities:hover {
-    cursor: pointer;
-  }	color: #000000;
+	color: #000000;
 }
 
 .container {
