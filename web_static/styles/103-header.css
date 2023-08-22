@@ -12,12 +12,10 @@ header {
 	text-align: left;
 }
 
-
 .menu_icon {
 	margin: .6rem 0 0 1rem;
 	display: inline-block;
 	font-size: 2rem;
-	font-weight: bolder;
 	transform: rotate(90deg);
 	color: lightslategray;
 	transition: .2s ease-in-out;
@@ -26,7 +24,7 @@ header {
 .menu_icon:hover {
 	cursor: pointer;
 	transform: rotate(0deg);
-	color: silver;
+	color: pink;
 	transition: .2s ease-in-out;
 }
 
@@ -37,7 +35,7 @@ header {
 #menu_toggle:checked {
 	cursor: pointer;
 	transform: rotate(0deg);
-	color: silver;
+	color: pink;
 	transition: .2s ease-in-out;
 }
 
@@ -46,7 +44,7 @@ header {
 	height: 0%;
 	border-radius: 4px;
 	transition: .2s ease-in-out;
-	background-color: aliceblue;
+	background-color: lightblue;
 }
 
 input {
