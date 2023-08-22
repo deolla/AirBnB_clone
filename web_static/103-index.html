@@ -2,38 +2,38 @@
 <html lang="en" dir="ltr">
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Web Static</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/x-icon" href="images/icon.png">
 		<link rel="stylesheet" href="styles/103-common.css">
 		<link rel="stylesheet" href="styles/103-header.css">
 		<link rel="stylesheet" href="styles/103-footer.css">
 		<link rel="stylesheet" href="styles/103-filters.css">
 		<link rel="stylesheet" href="styles/103-places.css">
-		<link rel="icon" href="images/icon.png">
 	</head>
 	<body>
 		<header>
-			<div class="pop_star">
-				<label class="boogeyman" for="label1">|||</label>
-				<input type="checkbox" id="label1" name="label1" class="boogeyman2">
+			<div class="mobile_menu" role="navigation" aria-label="Mobile Navigation">
+				<label for="menu_toggle" class="menu_icon" aria-label="Toggle Menu">|||</label>
+				<input type="checkbox" id="menu_toggle" name="menu_toggle" class="menu_check" aria-hidden="true" tabindex=0>
 				<nav>
-					<ul class="navigate1">
+					<ul class="menu_level1">
 						<li>
-							<label for="label2"><span>States</span></label>
-							<input type="checkbox", name="label2" id="lable2">
+							<label for="location_toggle"><span>States</span></label>
+							<input type="checkbox" name="location_toggle" id="location_toggle" aria-hidden="true">
 							<ul>
 								<li><span>Arizona</span></li>
 								<li><span>California</span></li>
 							</ul>
 						</li>
 						<li>
-							<label for="label3"><span>Amenities</span></label>
-							<input type="checkbox", name="label3" id="lable3">
+							<label for="facility_toggle"><span>Amenities</span></label>
+							<input type="checkbox" name="facility_toggle" id="facility_toggle" aria-hidden="true">
 							<ul>
 								<li><span>Internet</span></li>
 								<li><span>Tv</span></li>
 								<li><span>Wifi</span></li>
-
+								<li><span>Kitchen</span></li>
 								<li><span>Iron</span></li>
 							</ul>
 						</li>
@@ -42,7 +42,7 @@
 			</div>
 		</header>
 		<div class="container">
-			<section class="filters">
+			<section class="filters" role="navigation">
 				<div class="locations">
 					<h3>States</h3>
 					<h4>California, Arizona...</h4>
@@ -52,6 +52,7 @@
 							<ul>
 								<li>Page</li>
 								<li>Page2</li>
+								<li>Page3</li>
 							</ul>
 						</li>
 						<li>
@@ -75,7 +76,7 @@
 				</div>
 				<button type="button">Search</button>
 			</section>
-			<!--- section 2 -->
+
 			<section class="places">
 				<h1>Places</h1>
 				<article>
@@ -87,30 +88,27 @@
 					</div>
 					<div class="information">
 						<div class="max_guest">
-							<div class="icon"></div>
-							<p>2 guests</p>
+							<p>2 Guests</p>
 						</div>
 						<div class="number_rooms">
-							<div class="icon"></div>
-							<p>1 Bedrooms </p>
+							<p>1 Bedroom</p>
 						</div>
 						<div class="number_bathrooms">
-							<div class="icon"></div>
-							<p>1 Bathrooms</p>
+							<p>1 Bathroom</P>
 						</div>
 					</div>
 					<div class="user">
-						<p><b>Owner: </b>John Lennon</p>
+						<p><b>Owner:</b> John Lennon</p>
 					</div>
 					<div class="description">
-						<p>This is a lovely 1 bedroom and 1 bathroom apartment that can accommodate 2 people. It is located at the center of Shanghai and next to subway line 1. 1 stop to People Square, 2 stops to Bund, 3 stops to Jingan Temple.</p>
+						<p>This is a lovely 1 bathroom apartament that can accommodate 2 people. It locates at the center of Shanghai and next to subway line 1, 1 stop to People Square, 2 stops to Bund, 3 stops to Jungan Temle.</p>
 					</div>
 					<div class="amenities">
 						<h2>Amenities</h2>
 						<ul>
 							<li>
 								<div class="friendly_pet"></div>
-								<p>Pet friend</p>
+								<p>Pet friendly</p>
 							</li>
 							<li>
 								<div class="tv_icon"></div>
@@ -118,7 +116,7 @@
 							</li>
 							<li>
 								<div class="wifi"></div>
-								<p>Wifi<p>
+								<p>Wifi</p>				
 							</li>
 						</ul>
 					</div>
@@ -126,37 +124,38 @@
 						<h2>2 Reviews</h2>
 						<ul>
 							<li>
-								<h3>From Bob Dylan the 27th August 2022</h3>
+								<h3>From Bob Dylan the 27th August 202></h3>
 								<p>Runshi is an epic host. Nothing more i can say. 5 star!</p>
 							</li>
 							<li>
-								<h3>From Connor 4th August 2017</h3>
+								<h3>From Connor 4th January 2021</h3>
 								<p>Higly recommended!</p>
 							</li>
 						</ul>
 					</div>
 				</article>
+
 				<article>
 					<h2>Tiny house</h2>
 					<div class="price_by_night">
-                                                <p>$65</p>
-                                        </div>
-                                        <div class="information">
+						<p>$65</p>
+					</div>
+					<div class="information">
 						<div class="max_guest">
-							<p>4 guests</p>
-                                                </div>
+							<p>4 Guests</p>
+						</div>
 						<div class="number_rooms">
-							<p>2 Bedrooms </p>
-                                                </div>
-                                                <div class="number_bathrooms">
-							<p>1 Bathrooms</p>
+							<p>2 Bedrooms</p>
+						</div>
+						<div class="number_bathrooms">
+							<p>1 Bathroom</p>
 						</div>
 					</div>
 					<div class="user">
 						<p><b>Owner: </b>Adrienne</p>
 					</div>
 					<div class="description">
-						<p>Our place is a private, affordable stand-alone guest house centrally located just mintues to French Quaters, downtown, the fair Ground (Jazz Fest) and City Park.The guest house is a quaint, 400 suare ft. with a full bath, mini kitchen, & livin room. The extra high cellings make the home feel more spacious. The sofa converts to bed also. We have a hand made counter area that adds character to the room and a great porch/deck to relax on and have a glass of Merlot.</p>
+						<p>Our place is a privete, afffordable satan-alone guest house centrally located just minutes to French Quarters, downtown th Fair Grounds (Jazz Fest) and City Park. The guest house is a quaint, 400 suare ft. with a full bath, mini kitchen,and livin room. The extra high cellings make the home feel more spacious. The sofa converts to bed also. We have a hand made counter area that adds character to the room and a great porch/deck to relax on and have a glass of Merlot.</p>
 					</div>
 					<div class="amenities">
 						<h2>Amenities</h2>
@@ -171,34 +170,142 @@
 						<h2>1 Review</h2>
 						<ul>
 							<li>
-								<h3>From Max the 15th August 2017</h3>
-								<p>Fantastic place. clean, great and evrything went super smooth</p>
+								<h3>From Max the 15th August 2023</h3>
+								<p>Runshi is an epic host. Nothing more i can say. 5 star!</p>
 							</li>
 							<li>
+								<h3>From Connor 4th August 2027</h3>
+								<p>Fantabulous</p>
+							</li>
 						</ul>
 					</div>
 				</article>
+
 				<article>
 					<h2>A suite</h2>
 					<div class="price_by_night">
-                                                <p>$65</p>
-                                        </div>
-                                        <div class="information">
+						<p>$190</p>
+					</div>
+					<div class="information">
 						<div class="max_guest">
-							<p>12 guests</p>
+							<p>6 Guests</p>
 						</div>
 						<div class="number_rooms">
-                                                        <p>6 Bedrooms </p>
-                                                </div>
-                                                <div class="number_bathrooms">
-                                                        <p>4 Bathrooms</p>
-                                                </div>
-                                        </div>
+							<p>3 Bedroom</p>
+						</div>
+						<div class="number_bathrooms">
+							<p>2 Bathroom</p>
+						</div>
+					</div>
 					<div class="user">
-						<p><b>Owner: </b>Oluwaseyi Adeosun</p>
+						<p><b>Owner: </b>Mickey Mouse</p>
 					</div>
 					<div class="description">
 						<p>First loft built by Holbies. It contains a decked terrace, jacuzzi, firepit, rabbits garden, two rooms, two balconies, entrance gate, private garden, private parking, BBQ area, AC in each bedroom, technological equipment, luxury beds, and mountain views. Ideal for architecture lovers, romantic dates, or having a good time. It is a unique space of his kind. Only pets that do not harm rabbits are allowed.</p>
+					</div>
+					<div class="amenities">
+						<h2>Amenities</h2>
+						<ul>
+							<li>
+								<div class="pet_friendly_pet"></div>
+								<p>Pet friendly</p>
+							</li>
+							<li>
+								<div class="tv_icon"></div>
+								<p>Tv</p>
+							</li>
+							<li>
+								<div class="wifi"></div>
+								<p>Wifi</p>
+							</li>
+						</ul>
+					</div>
+					<div class="reviews">
+						<h2>1 Review</h2>
+						<ul>
+							<li>
+								<h3>From Bill Zuckerbury the 25th January 2022</h3>
+								<p>Newly renovated spacious 6 bedroom 3 bathroom in cozy gastown style.</p>
+							</li>
+						</ul>
+					</div>
+				</article>
+
+				<article>
+					<div class="home">
+						<h2>My Cottages</h2>
+						<div class="price_by_night">
+							<p>$120<p>
+						</div>
+					</div>
+					<div class="information">
+						<div class="max_guest">
+							<p>2 Guests</p>
+						</div>
+						<div class="number_rooms">
+							<p>1 Bedroom<p>
+						</div>
+						<div class="number_bathrooms">
+							<p>2 Bathroom<p>
+						</div>
+					</div>
+					<div class="user">
+						<p><b>Owner: </b>Boogeyman</p>
+					</div>
+					<div class="description">
+						<p>This is a lovely 1 bathroom apartament that can accommodate 2 people. It locates at the center of Shanghai and next to subway line 1, 1 stop to People Square, 2 stops to Bund, 3 stops to Jungan Temle.</p>
+					</div>
+					<div class="amenities">
+						<h2>Amenities</h2>
+						<ul>
+							<li>
+								<div class="friendly_pet"></div>
+								<p>Pet friendly</p>
+							</li>
+							<li>
+								<div class="wifi"></div>
+								<p>Wifi</p>
+							</li>
+						</ul>
+					</div>
+					<div class="reviews">
+						<h2>2 Reviews</h2>
+						<ul>
+							<li>
+								<h3>From Barack Obama the 27th March 2023</h3>
+								<p> A very peaceful environment.. 5 star!</p>
+							</li>
+							<li>
+								<h3>From Rihanna 4th August 2022</h3>
+								<p> Lovely place, Higly recommended!</p>
+							</li>
+						</ul>
+					</div>
+				</article>
+
+				<article>
+					<div class="home">
+						<h2>Chalet Villa</h2>
+						<div class="price_by_night">
+							<p>$179</p>
+						</div>
+					</div>
+					<div class="information">
+						<div class="max_guest">
+							<p>6 Guests<p>
+						</div>
+						<div class="number_rooms">
+							<p>3 Bedroom</p>
+						</div>
+						<div class="number_bathrooms">
+							<p>2 Bathroom</p>
+						</div>
+					</div>
+					<div class="user">
+						<p><b>Owner: </b>Adeosun Oluwaseyi</p>
+					</div>
+					<div class="description">
+						<p>This is a lovely 1 bathroom apartament that can accommodate 2 people. It locates at the center of Shanghai and next to subway line 1, 1 stop to People Square, 2 stops to Bund, 3 stops to Jungan Temle.</p>
 					</div>
 					<div class="amenities">
 						<h2>Amenities</h2>
@@ -218,18 +325,79 @@
 						</ul>
 					</div>
 					<div class="reviews">
-						<h2>1 Review</h2>
+						<h2>2 Reviews</h2>
 						<ul>
 							<li>
-								<h3>From Bill Zuckerberg the 27th January 2017</h3>
-									<p>Newly renovated spacious 6 bedroom 3 bathroom in cozy gastown style.</p>
+								<h3>From Drakula the 27th September 2019</h3>
+                <p>5 star!! I love it</p>
+							</li>
+							<li>
+								<h3>From Lovebug May 2022</h3>
+								<p>Higly recommended!</p>
 							</li>
 						</ul>
 					</div>
 				</article>
+
+				<article>
+					<div class="home">
+						<h2>Lofty Softy</h2>
+						<div class="price_by_night">
+							<p>$90</p>
+						</div>
+					</div>
+					<div class="information">
+						<div class="max_guest">
+							<p>10 Guests</p>
+						</div>
+						<div class="number_rooms">
+							<p>6 Bedroom</p>
+						</div>
+						<div class="number_bathrooms">
+							<p>1 Bathroom</p>
+						</div>
+					</div>
+					<div class="user">
+						<p><b>Owner: </b>Lofy Wiggleman</p>
+					</div>
+					<div class="description">
+						<p>It locates at the center of Shanghai and next to subway line 1, 1 stop to People Square, 2 stops to Bund, 3 stops to Jungan Temle.</p>
+					</div>
+					<div class="amenities">
+						<h2>Amenities</h2>
+						<ul>
+							<li>
+								<div class="friendly_pet"></div>
+								<p>Pet friendly</p>
+							</li>
+							<li>
+								<div class="tv_icon"></div>
+								<p>Tv</p>
+							</li>
+							<li>
+								<div class="wifi"></div>
+								<p>Wifi</p>
+							</li>
+						</ul>
+					</div>
+					<div class="reviews">
+						<h2>2 Reviews</h2>
+						<ul>
+							<li>
+                <h3>From Micheal Jordan the 27th August 2022</h3>
+                <p>Softy is an epic host. Nothing more i can say. 5 star!</p>
+							</li>
+							<li>
+								<h3>From Connor 4th August 2022</h3>
+								<p>Higly recommended!</p>
+							</li>
+						</ul>
+					</div>
+				</article>
+
 			</section>
 		</div>
-		<footer>
+		<footer aria-label="Footer info">
 			<p>Best School</p>
 		</footer>
 	</body>
