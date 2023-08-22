@@ -74,6 +74,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
+	line-height: 2;
 }
 
 .user {
@@ -82,6 +83,10 @@
 .user b, p {
 	margin: 0;
 	padding: 0;
+}
+
+.description {
+	word-spacing: 0px;
 }
 
 .max_guest {
@@ -107,11 +112,10 @@
 	text-align:center;
 }
 
-.places .amenities,
-.places .reviews {
-	margin-top: 40px;
-	width: 100%;
-	height: inherit;
+.places .amenities, .places .reviews {
+	margin-top: 30px;
+        width: 100%;
+        height: fit-content;
 }
 
 .places .amenities ul,
@@ -129,6 +133,7 @@
 
 .places .reviews h3 {
 	font-size: 14px;
+	line-height: 2;
 }
 
 .places .reviews p {
@@ -140,7 +145,7 @@
 	flex-direction: row;
 	justify-content: flex-start;
 	align-content: center;
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 	align-items: end;
 }
 
@@ -151,15 +156,14 @@
 .tv_icon {
 	background-image: url(../images/icon_tv.png);
 }
+
 .wifi {
 	background-image: url(../images/icon_wifi.png);
 }
 
-.friendly_pet,
-.tv_icon,
-.wifi {
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 20px;
-  height: 20px;
+.friendly_pet, .tv_icon, .wifi {
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 20px;
+	height: 20px;
 }

@@ -1,10 +1,10 @@
 *{
-	margin: 0;
 	padding: 0;
-	list-style: none;
+	margin: 0;
 	text-decoration: none;
-	border: none;
 	outline: none;
+	list-style: none;
+	border: none;
 }
 
 html {
@@ -14,20 +14,23 @@ html {
 body {
 	font-size: 14px;
 	font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
-  width: 100%;
-  color: #484848;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+	width: 100%;
+	color: #484848;
+	display: flex;
+	flex-direction: column;
+	z-index: 0;
+	justify-content: space-between;
 }
+
 span {
 	color: #000000;
 }
+
 .container {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  margin: 2rem auto;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	margin: 2rem auto;
 }
 
 .container {
@@ -47,7 +50,6 @@ span {
 @media only screen and (min-width: 768px) {
 
 }
-
 @media only screen and (min-width: 992px) {
 
 	body {
