@@ -1,0 +1,121 @@
+header {
+	z-index: 4;
+	color: #fff;
+	height: 3.5rem;
+	width: 100%;
+	border-bottom: 1px solid #CCCCCC;
+	background-image: url(../images/logo.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	float: left;
+	text-align: left;
+}
+
+.menu_icon {
+	margin: .6rem 0 0 1rem;
+	display: inline-block;
+	font-size: 2rem;
+	transform: rotate(90deg);
+	color: lightslategray;
+	transition: .2s ease-in-out;
+}
+
+.menu_icon:hover {
+	cursor: pointer;
+	transform: rotate(0deg);
+	color: pink;
+	transition: .2s ease-in-out;
+}
+
+.menu_icon:focus {
+	background-color: antiquewhite;
+}
+
+#menu_toggle:checked {
+	cursor: pointer;
+	transform: rotate(0deg);
+	color: pink;
+	transition: .2s ease-in-out;
+}
+
+.menu_level1 {
+	width: 0%;
+	height: 0%;
+	border-radius: 4px;
+	transition: .2s ease-in-out;
+	background-color: lightblue;
+}
+
+input {
+	display: none;
+}
+
+.menu_level1 li ul {
+	display: none;
+}
+
+.menu_level1 li{
+	display: none;
+}
+
+#menu_toggle:checked ~ * .menu_level1 {
+	display: block;
+}
+
+#menu_toggle:checked ~ * .menu_level1 li {
+	display: block;
+	font-size: 1.3rem;
+	margin: .4rem;
+	color: lightslategray;
+	font-weight: bold;
+	transition: .5s ease-in-out;
+}
+
+.menu_level1 li label span:hover,
+ul li span:hover
+{
+	 background-color: #434343;
+	 width: 100%;
+	 display: inline-block;
+	 padding: .2rem 1rem;
+	 border-radius: 4px;
+	 color: #FAFAFA;
+	 cursor: pointer;
+}
+
+#menu_toggle:checked ~ * .menu_level1
+{
+	display: block;
+	margin: 1rem;
+	padding: .8rem;
+	flex-direction: column;
+	transition: .3s ease-in-out;
+	width: 50vw;
+	transition: 1s ease-in-out;
+}
+
+#location_toggle:checked  + ul{
+	display: block;
+}
+#facility_toggle:checked  + ul{
+	display: block;
+}
+
+@media only screen and (min-width: 600px) {
+
+}
+
+@media only screen and (min-width: 768px) {
+	header {
+		background-position: left;
+		background-position-x: 1rem;
+	}
+	.mobile_menu {
+		display: none;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+
+}
