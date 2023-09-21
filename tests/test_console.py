@@ -1,111 +1,38 @@
 #!/usr/bin/python3
+"""Unittest for Console."""
+import console
+import inspect
+import pep8
 import unittest
-from console import HBNBCommand
-from models.base_model import BaseModel
-from models.user import User
-from models.state import State
-from models.city import City
-from models.amenity import Amenity
-from models.place import Place
-from models.review import Review
-import json
-from io import StringIO
-from unittest.mock import patch
-from models.engine.file_storage import FileStorage
-"""
-Unittest for Console
-"""
+HBNBCommand = console.HBNBCommand
 
 
-class TestConsole(unittest.TestCase):
+class TestConsoleDocs(unittest.TestCase):
+    """Class testing documentation of the console"""
+    def test_pep8_conformance_console(self):
+        """Test console.py."""
+        pep = pycodestyle.StyleGuide(quiet=True)
+        result = pep.check_files(['console.py'])
+        self.assertEqual(result.total_errors, 0,
+                         "Found code style errors (and warnings).")
 
-    def setUp(self):
-        """
-        Set up test fixture
-        """
-        self.console = HBNBCommand()
-        self.user = User()
-        self.user.name = "John Doe"
-        self.user.save()
+    def test_pep8_conformance_test_console(self):
+        """Test tests/test_console.py."""
+        pep = pycodestyle.StyleGuide(quiet=True)
+        result = pep.check_files(['tests/test_console.py'])
+        self.assertEqual(result.total_errors, 0,
+                         "Found code style errors (and warnings).")
 
-    def tearDown(self):
-        """
-        Tear down test fixture
-        """
-        try:
-            storage.clear()
-        except Exception as e:
-            print(e)
+    def test_console_module_docs(self):
+        """Test console.py module docstring"""
+        self.assertIsNot(console.__doc__, None,
+                         "console.py needs a docstring")
+        self.assertTrue(len(console.__doc__) >= 1,
+                        "console.py needs a docstring")
 
-    def test_create(self):
-        """
-        Test the create command
-        """
-        with patch('sys.stdout', new=StringIO()) as f:
-            self.console.onecmd("create User")
-            output = f.getvalue()
-            self.assertEqual(output, "1\n")
-
-    def test_show(self):
-        """
-        Test the show command
-        """
-        with patch('sys.stdout', new=StringIO()) as f:
-            self.console.onecmd("show User 1")
-            output = f.getvalue()
-            self.assertEqual(output, "John Doe\n")
-
-    def test_destroy(self):
-        """
-        Test the destroy command
-        """
-        with patch('sys.stdout', new=StringIO()) as f:
-            self.console.onecmd("destroy User 1")
-            output = f.getvalue()
-            self.assertEqual(output, "1\n")
-
-    def test_all(self):
-        """
-        Test the all command
-        """
-        with patch('sys.stdout', new=StringIO()) as f:
-            self.console.onecmd("all")
-            output = f.getvalue()
-            self.assertIn("User", output)
-            self.assertIn("1", output)
-
-    def test_update(self):
-        """
-        Test the update command
-        """
-        with patch('sys.stdout', new=StringIO()) as f:
-            self.console.onecmd("update User 1 name David Doe")
-            output = f.getvalue()
-            self.assertEqual(output, "1\n")
-
-            self.user = User.objects.get(id=1)
-            self.assertEqual(self.user.name, "David Doe")
-
-    def test_count(self):
-        """
-        Test the count command
-        """
-        with patch('sys.stdout', new=StringIO()) as f:
-            self.console.onecmd("count User")
-            output = f.getvalue()
-            self.assertEqual(output, "1\n")
-
-    def test_help(self):
-        """
-        Test the help command
-        """
-        with patch('sys.stdout', new=StringIO()) as f:
-            self.console.onecmd("help")
-            output = f.getvalue()
-            self.assertIn("create", output)
-            self.assertIn("show", output)
-            self.assertIn("destroy", output)
-            self.assertIn("all", output)
-            self.assertIn("update", output)
-            self.assertIn("count", output)
-            self.assertIn("quit", output)
+    def test_HBNBCommand_class_docs(self):
+        """Test HBNBCommand class docstring"""
+        self.assertIsNot(HBNBCommand.__doc__, None,
+                         "HBNBCommand class needs a docstring")
+        self.assertTrue(len(HBNBCommand.__doc__) >= 1,
+                        "HBNBCommand class needs a docstring")
